@@ -4,13 +4,13 @@ session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['logout'])) {
    // Terminer la session
-   session_unset();
-   session_destroy();
+   session_unset(); // Détruire toutes les variables de session
+   session_destroy(); // Détruire la session actuelle
 }
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
    <meta charset="UTF-8">
