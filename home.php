@@ -2,8 +2,8 @@
 require_once('connexion.php');
 session_start();
 
+// Vérifie si la méthode de requête est GET et si le paramètre 'logout' est présent dans la requête GET
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['logout'])) {
-   // Terminer la session
    session_unset(); // Détruire toutes les variables de session
    session_destroy(); // Détruire la session actuelle
 }
